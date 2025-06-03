@@ -1,0 +1,9 @@
+D:\programming course\Nour\Nour vs\BBMS-Business\bin\Debug\BBMS-Business.dll
+D:\programming course\Nour\Nour vs\BBMS-Business\bin\Debug\BBMS-Business.pdb
+D:\programming course\Nour\Nour vs\BBMS-Business\bin\Debug\BBMS-Data.dll
+D:\programming course\Nour\Nour vs\BBMS-Business\bin\Debug\BBMS-Data.pdb
+D:\programming course\Nour\Nour vs\BBMS-Business\obj\Debug\BBMS-Business.csproj.AssemblyReference.cache
+D:\programming course\Nour\Nour vs\BBMS-Business\obj\Debug\BBMS-Business.csproj.CoreCompileInputs.cache
+D:\programming course\Nour\Nour vs\BBMS-Business\obj\Debug\BBMS-Bus.1813CC09.Up2Date
+D:\programming course\Nour\Nour vs\BBMS-Business\obj\Debug\BBMS-Business.dll
+D:\programming course\Nour\Nour vs\BBMS-Business\obj\Debug\BBMS-Business.pdb

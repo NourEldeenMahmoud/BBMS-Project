@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B0060FF-6B7F-4337-98EE-6452A960D257}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BBMS</RootNamespace>
+    <AssemblyName>BBMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D4BB28C2D83E8A5A48436B4E79584F483E455583</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BBMS-Presentation_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BloodStock\frmManageBloodStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodStock\frmManageBloodStock.Designer.cs">
+      <DependentUpon>frmManageBloodStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodStock\frmShowBloodUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodStock\frmShowBloodUnit.Designer.cs">
+      <DependentUpon>frmShowBloodUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodStock\frmTestBlood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodStock\frmTestBlood.Designer.cs">
+      <DependentUpon>frmTestBlood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlBloodUnitInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlBloodUnitInfo.Designer.cs">
+      <DependentUpon>ctrlBloodUnitInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlBlooUnitCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlBlooUnitCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlBlooUnitCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlDonorCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlDonorCard.Designer.cs">
+      <DependentUpon>ctrlDonorCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlEmployeeCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlEmployeeCard.Designer.cs">
+      <DependentUpon>ctrlEmployeeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlFindPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlFindPatient.Designer.cs">
+      <DependentUpon>ctrlFindPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlPatientCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlPatientCard.Designer.cs">
+      <DependentUpon>ctrlPatientCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlPersonCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlPersonCard.Designer.cs">
+      <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlPersonCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlPersonCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlPersonCardWithNoTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlPersonCardWithNoTitle.Designer.cs">
+      <DependentUpon>ctrlPersonCardWithNoTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlTransfusionRequestDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlTransfusionRequestDetails.Designer.cs">
+      <DependentUpon>ctrlTransfusionRequestDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\frmAddUpdateDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\frmAddUpdateDonor.Designer.cs">
+      <DependentUpon>frmAddUpdateDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\frmDonate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\frmDonate.Designer.cs">
+      <DependentUpon>frmDonate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\frmManageDonors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\frmManageDonors.Designer.cs">
+      <DependentUpon>frmManageDonors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\frmShowDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\frmShowDonor.Designer.cs">
+      <DependentUpon>frmShowDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmAddUpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmAddUpdateEmployee.Designer.cs">
+      <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmManageEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmManageEmployees.Designer.cs">
+      <DependentUpon>frmManageEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\frmShowEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmShowEmployee.Designer.cs">
+      <DependentUpon>frmShowEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodStock\frmAddBloodUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodStock\frmAddBloodUnit.Designer.cs">
+      <DependentUpon>frmAddBloodUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmAddUpdatePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmAddUpdatePatient.Designer.cs">
+      <DependentUpon>frmAddUpdatePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmManagePatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmManagePatients.Designer.cs">
+      <DependentUpon>frmManagePatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmShowAllPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmShowAllPatients.Designer.cs">
+      <DependentUpon>frmShowAllPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfusion\frmAddUpdateTransfusionRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfusion\frmAddUpdateTransfusionRequest.Designer.cs">
+      <DependentUpon>frmAddUpdateTransfusionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmShowPatientCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmShowPatientCard.Designer.cs">
+      <DependentUpon>frmShowPatientCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmAddUpdatePerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAddUpdatePerson.Designer.cs">
+      <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmManagePeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmManagePeople.Designer.cs">
+      <DependentUpon>frmManagePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmPersonCardDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmPersonCardDetails.Designer.cs">
+      <DependentUpon>frmPersonCardDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmShowAllPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmShowAllPeople.Designer.cs">
+      <DependentUpon>frmShowAllPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transfusion\frmChooseManually.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfusion\frmChooseManually.Designer.cs">
+      <DependentUpon>frmChooseManually.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfusion\frmMakeTransfusion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfusion\frmMakeTransfusion.Designer.cs">
+      <DependentUpon>frmMakeTransfusion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfusion\frmManageTransfusions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfusion\frmManageTransfusions.Designer.cs">
+      <DependentUpon>frmManageTransfusions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfusion\frmShowTransfusionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfusion\frmShowTransfusionDetails.Designer.cs">
+      <DependentUpon>frmShowTransfusionDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BloodStock\frmManageBloodStock.resx">
+      <DependentUpon>frmManageBloodStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodStock\frmShowBloodUnit.resx">
+      <DependentUpon>frmShowBloodUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodStock\frmTestBlood.resx">
+      <DependentUpon>frmTestBlood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlBloodUnitInfo.resx">
+      <DependentUpon>ctrlBloodUnitInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlBlooUnitCardWithFilter.resx">
+      <DependentUpon>ctrlBlooUnitCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlDonorCard.resx">
+      <DependentUpon>ctrlDonorCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlEmployeeCard.resx">
+      <DependentUpon>ctrlEmployeeCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlFindPatient.resx">
+      <DependentUpon>ctrlFindPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlPatientCard.resx">
+      <DependentUpon>ctrlPatientCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlPersonCard.resx">
+      <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlPersonCardWithFilter.resx">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlPersonCardWithNoTitle.resx">
+      <DependentUpon>ctrlPersonCardWithNoTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlTransfusionRequestDetails.resx">
+      <DependentUpon>ctrlTransfusionRequestDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\frmAddUpdateDonor.resx">
+      <DependentUpon>frmAddUpdateDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\frmDonate.resx">
+      <DependentUpon>frmDonate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\frmManageDonors.resx">
+      <DependentUpon>frmManageDonors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\frmShowDonor.resx">
+      <DependentUpon>frmShowDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmAddUpdateEmployee.resx">
+      <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmManageEmployees.resx">
+      <DependentUpon>frmManageEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmShowEmployee.resx">
+      <DependentUpon>frmShowEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodStock\frmAddBloodUnit.resx">
+      <DependentUpon>frmAddBloodUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmAddUpdatePatient.resx">
+      <DependentUpon>frmAddUpdatePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmManagePatients.resx">
+      <DependentUpon>frmManagePatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmShowAllPatients.resx">
+      <DependentUpon>frmShowAllPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfusion\frmAddUpdateTransfusionRequest.resx">
+      <DependentUpon>frmAddUpdateTransfusionRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmShowPatientCard.resx">
+      <DependentUpon>frmShowPatientCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAddUpdatePerson.resx">
+      <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmManagePeople.resx">
+      <DependentUpon>frmManagePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmPersonCardDetails.resx">
+      <DependentUpon>frmPersonCardDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmShowAllPeople.resx">
+      <DependentUpon>frmShowAllPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Transfusion\frmChooseManually.resx">
+      <DependentUpon>frmChooseManually.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfusion\frmMakeTransfusion.resx">
+      <DependentUpon>frmMakeTransfusion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfusion\frmManageTransfusions.resx">
+      <DependentUpon>frmManageTransfusions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfusion\frmShowTransfusionDetails.resx">
+      <DependentUpon>frmShowTransfusionDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BBMS-Presentation_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BBMS-Business\BBMS-Business.csproj">
+      <Project>{3da64969-99ae-4f24-9482-decda9190bff}</Project>
+      <Name>BBMS-Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag A-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag A+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag AB-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag AB+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag B-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag B+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag O-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag O+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-type.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general-blood-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood-bag B+1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\magnifier %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\BagNotFound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\close33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\cminimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\expand-arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\people.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

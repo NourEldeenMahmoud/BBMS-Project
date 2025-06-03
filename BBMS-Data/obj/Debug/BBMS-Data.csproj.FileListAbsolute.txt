@@ -1,0 +1,6 @@
+D:\programming course\Nour\Nour vs\BBMS-Data\bin\Debug\BBMS-Data.dll
+D:\programming course\Nour\Nour vs\BBMS-Data\bin\Debug\BBMS-Data.pdb
+D:\programming course\Nour\Nour vs\BBMS-Data\obj\Debug\BBMS-Data.csproj.AssemblyReference.cache
+D:\programming course\Nour\Nour vs\BBMS-Data\obj\Debug\BBMS-Data.csproj.CoreCompileInputs.cache
+D:\programming course\Nour\Nour vs\BBMS-Data\obj\Debug\BBMS-Data.dll
+D:\programming course\Nour\Nour vs\BBMS-Data\obj\Debug\BBMS-Data.pdb
