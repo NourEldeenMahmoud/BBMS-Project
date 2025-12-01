@@ -1,0 +1,11 @@
+# Visual Studio stuff
+.vs/
+*/.vs/
+obj/
+bin/
+
+# Cache files
+*.cache
+*.suo
+*.user
+*.vsidx
